@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.testing.testDataEntity.PolicyAttrGstUpdateEntity" table="PolicyAttrGstUpdateEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ConfigIsGstExempted" column="ConfigIsGstExempted" type="boolean" />
+			<property name="IsGstExempted" column="IsGstExempted" type="string" />
+			<property name="ConfigResonForGstExemption" column="ConfigResonForGstExemption" type="boolean" />
+			<property name="ResonForGstExemption" column="ResonForGstExemption" type="string" />
+			<property name="ConfigExportOfService" column="ConfigExportOfService" type="boolean" />
+			<property name="ExportOfService" column="ExportOfService" type="string" />
+			<property name="ConfigIsdGstinApplicableExempted" column="ConfigIsdGstinApplicableExempted" type="boolean" />
+			<property name="IsdGstinApplicableExempted" column="IsdGstinApplicableExempted" type="string" />
+			<property name="ConfigGstin" column="ConfigGstin" type="boolean" />
+			<property name="Gstin" column="Gstin" type="string" />
+			<property name="ConfigForwardButton" column="ConfigForwardButton" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigFinalSaveButton" column="ConfigFinalSaveButton" type="boolean" />
+			<property name="ConfigFinalSaveMotorButton" column="ConfigFinalSaveMotorButton" type="boolean" />
+			<property name="ConfigIsthePaymentreceivedfromGovtEntity" column="ConfigIsthePaymentreceivedfromGovtEntity" type="boolean" />
+			<property name="IsthePaymentreceivedfromGovtEntity" column="IsthePaymentreceivedfromGovtEntity" type="string" />
+			<property name="ConfigIsthisrisklocatedinSEZZone" column="ConfigIsthisrisklocatedinSEZZone" type="boolean" />
+			<property name="IsthisrisklocatedinSEZZone" column="IsthisrisklocatedinSEZZone" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>
